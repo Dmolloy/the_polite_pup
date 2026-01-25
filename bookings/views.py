@@ -63,6 +63,17 @@ def edit_booking(request, booking_id):
 
 
 @login_required
+def my_bookings(request):
+
+    bookings = Booking.objects.filter(user=request.user)
+
+    return render(
+        request,
+        'bookings/my_bookings.html',
+        {'bookings': bookings}
+    )
+
+@login_required
 def delete_booking(request, booking_id):
 
     booking = get_object_or_404(

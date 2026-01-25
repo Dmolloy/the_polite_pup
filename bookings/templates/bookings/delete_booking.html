@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Booking</title>
+</head>
+<body>
+
+<h2>Delete Booking</h2>
+
+<p>Are you sure you want to delete this booking?</p>
+
+<p>
+    {{ booking.session }} —
+    {{ booking.date }} at {{ booking.time }}
+</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Yes, Delete</button>
+</form>
+
+<p><a href="/my-bookings/">Cancel</a></p>
+
+</body>
+</html>
