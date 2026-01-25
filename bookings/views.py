@@ -39,12 +39,44 @@ def create_booking(request):
 
 
 @login_required
-def my_bookings(request):
+def edit_booking(request, booking_id):
 
-    bookings = Booking.objects.filter(user=request.user)
+    booking = get_object_or_404(
+        Booking,
+        id=booking_id,
+        user=request.user
+    )
+
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('my_bookings')
+    else:
+        form = BookingForm(instance=booking)
 
     return render(
         request,
-        'bookings/my_bookings.html',
-        {'bookings': bookings}
+        'bookings/edit_booking.html',
+        {'form': form}
+    )
+
+
+@login_required
+def delete_booking(request, booking_id):
+
+    booking = get_object_or_404(
+        Booking,
+        id=booking_id,
+        user=request.user
+    )
+
+    if request.method == 'POST':
+        booking.delete()
+        return redirect('my_bookings')
+
+    return render(
+        request,
+        'bookings/delete_booking.html',
+        {'booking': booking}
     )

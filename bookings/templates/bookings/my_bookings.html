@@ -14,7 +14,11 @@
             <li>
                 {{ booking.session }} —
                 {{ booking.date }} at {{ booking.time }}
+
+                <a href="/edit/{{ booking.id }}/">Edit</a>
+                <a href="/delete/{{ booking.id }}/">Delete</a>
             </li>
+
         {% endfor %}
     </ul>
 
