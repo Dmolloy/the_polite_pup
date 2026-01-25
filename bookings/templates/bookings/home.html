@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>The Polite Pup</title>
-</head>
-<body>
-
 <h1>The Polite Pup</h1>
-<p>Professional dog training you can book online.</p>
 
 {% if user.is_authenticated %}
 
     <p>Welcome, {{ user.username }}!</p>
+
+    <p>
+        <a href="/book/">Book Session</a> |
+        <a href="/my-bookings/">My Bookings</a>
+    </p>
 
     <form method="post" action="/accounts/logout/">
         {% csrf_token %}
@@ -25,6 +22,3 @@
     </p>
 
 {% endif %}
-
-</body>
-</html>

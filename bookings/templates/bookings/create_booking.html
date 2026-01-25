@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Session</title>
+</head>
+<body>
+
+<h2>Book a Training Session</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Book</button>
+</form>
+
+<p><a href="/">Back to home</a></p>
+
+</body>
+</html>
