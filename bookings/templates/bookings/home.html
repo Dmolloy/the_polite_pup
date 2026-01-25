@@ -4,7 +4,27 @@
     <title>The Polite Pup</title>
 </head>
 <body>
-    <h1>The Polite Pup</h1>
-    <p>Professional dog training you can book online.</p>
+
+<h1>The Polite Pup</h1>
+<p>Professional dog training you can book online.</p>
+
+{% if user.is_authenticated %}
+
+    <p>Welcome, {{ user.username }}!</p>
+
+    <form method="post" action="/accounts/logout/">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form>
+
+{% else %}
+
+    <p>
+        <a href="/accounts/login/">Login</a> |
+        <a href="/signup/">Register</a>
+    </p>
+
+{% endif %}
+
 </body>
 </html>
