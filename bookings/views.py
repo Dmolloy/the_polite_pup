@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 from .models import Booking
 from .forms import BookingForm
@@ -11,13 +11,22 @@ def home(request):
 
 
 def signup(request):
+
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
+
+        for field in form.fields.values():
+            field.widget.attrs['class'] = 'form-control'
+
         if form.is_valid():
             form.save()
             return redirect('login')
+
     else:
         form = UserCreationForm()
+
+        for field in form.fields.values():
+            field.widget.attrs['class'] = 'form-control'
 
     return render(request, 'registration/signup.html', {'form': form})
 
