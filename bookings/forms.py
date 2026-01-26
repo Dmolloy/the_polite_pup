@@ -6,4 +6,30 @@ class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking
-        fields = ['session', 'date', 'time', 'notes']
+        fields = '__all__'
+        exclude = ['user']
+
+        widgets = {
+
+            'date': forms.DateInput(
+                attrs={
+                    'type': 'date',
+                    'class': 'form-control'
+                }
+            ),
+
+            'time': forms.TimeInput(
+                attrs={
+                    'type': 'time',
+                    'class': 'form-control'
+                }
+            ),
+
+            'notes': forms.Textarea(
+                attrs={
+                    'class': 'form-control',
+                    'rows': 3
+                }
+            ),
+
+        }
