@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Edit Booking</title>
-</head>
-<body>
+{% extends 'bookings/base.html' %}
+
+{% block content %}
 
 <h2>Edit Booking</h2>
 
 <form method="post">
+
     {% csrf_token %}
+
     {{ form.as_p }}
-    <button type="submit">Save</button>
+
+    <button class="btn btn-success">
+        Save Changes
+    </button>
+
 </form>
 
-<p><a href="/my-bookings/">Back</a></p>
-
-</body>
-</html>
+{% endblock %}

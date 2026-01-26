@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Book Session</title>
-</head>
-<body>
+{% extends 'bookings/base.html' %}
+
+{% block content %}
 
 <h2>Book a Training Session</h2>
 
-<form method="post">
+<form method="post" class="mt-3">
+
     {% csrf_token %}
+
     {{ form.as_p }}
-    <button type="submit">Book</button>
+
+    <button class="btn btn-primary mt-2">
+        Book Session
+    </button>
+
 </form>
 
-<p><a href="/">Back to home</a></p>
-
-</body>
-</html>
+{% endblock %}
