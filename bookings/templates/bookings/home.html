@@ -2,33 +2,34 @@
 
 {% block content %}
 
-<div class="hero text-center">
+<!-- HERO SECTION -->
+<div class="text-center py-5 bg-light rounded">
 
-    <h1 class="mb-3">
-        Welcome to The Polite Pup 🐕
+    <h1 class="display-5 fw-bold mb-3">
+        The Polite Pup 🐕
     </h1>
 
     <p class="lead mb-4">
-        Professional, friendly dog training you can book online.
+        Friendly, professional dog training to help your pup
+        become confident, calm, and happy.
     </p>
 
     {% if user.is_authenticated %}
 
-        <a href="/book/" class="btn btn-success btn-lg">
+        <a href="{% url 'create_booking' %}"
+           class="btn btn-primary btn-lg">
             Book a Session
         </a>
 
     {% else %}
 
         <a href="/accounts/login/"
-           class="btn btn-outline-light btn-lg me-2">
-
+           class="btn btn-primary btn-lg me-2">
             Login
         </a>
 
         <a href="/signup/"
            class="btn btn-success btn-lg">
-
             Register
         </a>
 
