@@ -2,34 +2,34 @@
 
 {% block content %}
 
-<!-- HERO SECTION -->
-<div class="text-center py-5 bg-light rounded">
+<!-- HERO -->
+<div class="hero text-center">
 
-    <h1 class="display-5 fw-bold mb-3">
+    <h1 class="display-4 fw-bold mb-3">
         The Polite Pup 🐕
     </h1>
 
     <p class="lead mb-4">
-        Friendly, professional dog training to help your pup
-        become confident, calm, and happy.
+        Helping dogs and owners build strong,
+        happy relationships through positive training.
     </p>
 
     {% if user.is_authenticated %}
 
         <a href="{% url 'create_booking' %}"
-           class="btn btn-primary btn-lg">
+           class="btn btn-success btn-lg px-5">
             Book a Session
         </a>
 
     {% else %}
 
         <a href="/accounts/login/"
-           class="btn btn-primary btn-lg me-2">
+           class="btn btn-primary btn-lg me-2 px-4">
             Login
         </a>
 
         <a href="/signup/"
-           class="btn btn-success btn-lg">
+           class="btn btn-success btn-lg px-4">
             Register
         </a>
 
@@ -37,43 +37,46 @@
 
 </div>
 
-<!-- ABOUT SECTION -->
-<div class="row align-items-center mt-5">
 
-    <div class="col-md-6 mb-4">
+<!-- ABOUT -->
+<div class="section row align-items-center">
 
-        <h2>About Me</h2>
+    <div class="col-md-6">
 
-        <p>
-            Hi, I'm Declan — a passionate dog trainer who believes
-            that every dog deserves patient, positive training.
+        <h2 class="mb-3">Meet Your Trainer</h2>
+
+        <p class="fs-5">
+            Hi, I'm Declan — a dedicated dog trainer who believes
+            every dog deserves patient, positive guidance.
         </p>
 
         <p>
-            I started The Polite Pup to help owners build strong,
-            loving relationships with their dogs through trust,
-            consistency, and care.
+            Through personalised sessions, I help owners
+            understand their dogs and build lifelong bonds.
         </p>
 
     </div>
 
-    <div class="col-md-6 text-center mb-4">
+    <div class="col-md-6">
 
-        <div class="p-4 bg-secondary text-white rounded">
-            <h5> Certified Trainer</h5>
-            <h5> Positive Methods</h5>
-            <h5> 1-on-1 Sessions</h5>
-            <h5> All Breeds Welcome</h5>
+        <div class="feature-box text-center">
+
+            <h5>✔ Certified Trainer</h5>
+            <h5>✔ Positive Reinforcement</h5>
+            <h5>✔ 1-on-1 Coaching</h5>
+            <h5>✔ All Breeds Welcome</h5>
+
         </div>
 
     </div>
 
 </div>
 
-<!-- SERVICES SECTION -->
-<div class="mt-5">
 
-    <h2 class="text-center mb-4">
+<!-- SERVICES -->
+<div class="section">
+
+    <h2 class="text-center mb-5">
         Training Services
     </h2>
 
@@ -81,15 +84,15 @@
 
         <div class="col-md-4 mb-4">
 
-            <div class="card h-100 shadow-sm">
+            <div class="card service-card h-100 shadow">
 
                 <div class="card-body">
 
-                    <h5>Puppy Training</h5>
+                    <h4>🐶 Puppy Training</h4>
 
                     <p>
-                        Help your puppy learn good habits
-                        from the very beginning.
+                        Build strong habits early and set your
+                        puppy up for lifelong success.
                     </p>
 
                 </div>
@@ -100,15 +103,15 @@
 
         <div class="col-md-4 mb-4">
 
-            <div class="card h-100 shadow-sm">
+            <div class="card service-card h-100 shadow">
 
                 <div class="card-body">
 
-                    <h5>Obedience Training</h5>
+                    <h4>🎯 Obedience</h4>
 
                     <p>
-                        Sit, stay, recall, and polite walking
-                        made simple and stress-free.
+                        Master commands, loose-lead walking,
+                        and calm behaviour.
                     </p>
 
                 </div>
@@ -119,15 +122,15 @@
 
         <div class="col-md-4 mb-4">
 
-            <div class="card h-100 shadow-sm">
+            <div class="card service-card h-100 shadow">
 
                 <div class="card-body">
 
-                    <h5>Behaviour Support</h5>
+                    <h4>❤️ Behaviour Support</h4>
 
                     <p>
-                        Support for barking, anxiety, and
-                        other problem behaviours.
+                        Help with anxiety, barking,
+                        and problem behaviours.
                     </p>
 
                 </div>
@@ -140,5 +143,58 @@
 
 </div>
 
+
+<!-- FEATURES -->
+<div class="section bg-light p-5 rounded">
+
+    <h2 class="text-center mb-4">
+        Why Choose The Polite Pup?
+    </h2>
+
+    <div class="row text-center">
+
+        <div class="col-md-3 mb-3">
+            🐾 Kind Training
+        </div>
+
+        <div class="col-md-3 mb-3">
+            📖 Evidence-Based
+        </div>
+
+        <div class="col-md-3 mb-3">
+            🤝 Personal Support
+        </div>
+
+        <div class="col-md-3 mb-3">
+            ⭐ Trusted Results
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- CTA -->
+<div class="section text-center">
+
+    <div class="cta-box">
+
+        <h2 class="mb-3">
+            Start Your Training Journey Today
+        </h2>
+
+        <p class="mb-4 fs-5">
+            Book your first session and help your dog
+            become calm, confident, and well-mannered.
+        </p>
+
+        <a href="{% url 'create_booking' %}"
+           class="btn btn-light btn-lg px-5">
+            Book Now
+        </a>
+
+    </div>
+
+</div>
 
 {% endblock %}
