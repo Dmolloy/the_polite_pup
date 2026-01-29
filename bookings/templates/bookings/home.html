@@ -39,15 +39,30 @@
 
 
 <!-- ABOUT -->
-<div class="section row align-items-center">
+ {% load static %}
 
-    <div class="col-md-6">
+<div class="row align-items-center mt-5">
 
-        <h2 class="mb-3">Meet Your Trainer</h2>
+    <div class="col-md-5 text-center mb-4">
+
+        <img src="{% static 'bookings/images/me.jpg' %}"
+             class="img-fluid rounded shadow w-50"
+             alt="Declan - Dog Trainer">
+
+    </div>
+
+    <div class="col-md-7 mb-4">
+
+        <h2>Who I am</h2>
 
         <p class="fs-5">
             Hi, I'm Declan — a dedicated dog trainer who believes
             every dog deserves patient, positive guidance.
+        </p>
+
+        <p>
+            I specialise in positive, patient training that
+            helps dogs feel confident and relaxed.
         </p>
 
         <p>
@@ -57,16 +72,97 @@
 
     </div>
 
-    <div class="col-md-6">
+</div>
 
-        <div class="feature-box text-center">
+<!-- TRAINING GALLERY -->
+<div class="mt-5">
 
-            <h5>✔ Certified Trainer</h5>
-            <h5>✔ Positive Reinforcement</h5>
-            <h5>✔ 1-on-1 Coaching</h5>
-            <h5>✔ All Breeds Welcome</h5>
+    <h2 class="text-center mb-4">
+        Training in Action
+    </h2>
+
+    <div id="trainingCarousel"
+         class="carousel slide shadow"
+         data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+
+                <img src="{% static 'bookings/images/training_session1.jpg' %}"
+                     class="d-block w-100 rounded"
+                     alt="Dalmation giving paw to trainer">
+
+            </div>
+
+            <div class="carousel-item">
+
+                <img src="{% static 'bookings/images/training_session2.jpg' %}"
+                     class="d-block w-100 rounded"
+                     alt="Terrier performing leading training ">
+
+            </div>
+
+            <div class="carousel-item">
+
+                <img src="{% static 'bookings/images/training_session3.jpg' %}"
+                     class="d-block w-100 rounded"
+                     alt="Poodle giving paw on command">
+
+            </div>
+            
+            <div class="carousel-item">
+
+                <img src="{% static 'bookings/images/training_session4.jpg' %}"
+                     class="d-block w-100 rounded"
+                     alt="Dalmation laying down with trainer">
+
+            </div>
+            
+            <div class="carousel-item">
+
+                <img src="{% static 'bookings/images/training_session5.jpg' %}"
+                     class="d-block w-100 rounded"
+                     alt="Golden retriever standing">
+
+            </div>
+            
+            <div class="carousel-item">
+
+                <img src="{% static 'bookings/images/puppy_training.jpg' %}"
+                     class="d-block w-100 rounded"
+                     alt="Puppy sitting nicely">
+
+            </div>
+            
+            <div class="carousel-item">
+
+                <img src="{% static 'bookings/images/obedience_training.jpg' %}"
+                     class="d-block w-100 rounded"
+                     alt="White dog sitting">
+
+            </div>
 
         </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#trainingCarousel"
+                data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon"></span>
+
+        </button>
+
+        <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#trainingCarousel"
+                data-bs-slide="next">
+
+            <span class="carousel-control-next-icon"></span>
+
+        </button>
 
     </div>
 
