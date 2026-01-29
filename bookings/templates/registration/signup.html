@@ -1,17 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Sign Up</title>
-</head>
-<body>
+{% extends 'bookings/base.html' %}
 
-<h2>Sign Up</h2>
+{% block content %}
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Register</button>
-</form>
+<div class="row justify-content-center">
 
-</body>
-</html>
+    <div class="col-md-6">
+
+        <div class="card p-4">
+
+            <h2 class="mb-4 text-center">
+                Create an Account
+            </h2>
+
+            <form method="post">
+
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <div class="d-grid mt-3">
+                    <button class="btn btn-success btn-lg">
+                        Register
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
