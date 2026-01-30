@@ -38,199 +38,215 @@
 </div>
 
 
-<!-- ABOUT -->
- {% load static %}
+{% load static %}
 
-<div class="row align-items-center mt-5">
+<section class="info-section">
 
-    <div class="col-md-5 text-center mb-4">
+    <div class="container">
 
-            <img src="{% static 'bookings/images/me.jpg' %}"
-                 class="img-fluid rounded shadow w-50"
-                 alt="Declan - Dog Trainer">
+        <!-- ABOUT ME -->
+        <div class="row align-items-center mb-5 g-4">
 
-        </div>
+            <!-- Photo -->
+            <div class="col-md-5 text-center">
 
-        <div class="col-md-7 mb-4">
-
-        <h2>Who I am</h2>
-
-        <p class="fs-5">
-            Hi, I’m Declan — a dedicated dog trainer 
-            who believes every dog deserves patient, positive, 
-            and understanding guidance.
-        </p>
-
-        <p>
-            I have spent many years working with dogs in a variety of roles, from dog sitting and daycare centres 
-            to running training classes. Along the way, 
-            I’ve studied dog psychology and trained across multiple disciplines to 
-            better understand how dogs think, learn, and communicate.
-        </p>
-
-        <p>
-            Working with dogs isn’t just my career — it’s my passion. Every session is personalised, because no two dogs 
-            (or owners) are the same. My goal is not just to train dogs, 
-            but to empower owners with the skills and confidence to continue that training at home.
-        </p>
-
-        <p>
-            As I like to say:
-            <strong>I don’t train dogs — I train humans to train their dogs.</strong>
-        </p>
-
-        <p>I truly believe that no dog is “untrainable.” With the right approach, 
-            patience, and understanding, every dog can learn and thrive.
-        </p>
-
-    </div>
-
-</div>
-
-<!-- TRAINING GALLERY -->
-<div class="d-flex justify-content-center">
-
-    <div class="col-10 col-sm-8 col-md-5 col-lg-3"> 
-
-    <h2 class="text-center mb-4">
-        Training in Action
-    </h2>
-
-    <div id="trainingCarousel"
-         class="carousel slide shadow"
-         data-bs-ride="carousel">
-
-        <div class="carousel-inner">
-
-            <div class="carousel-item active">
-
-                <img src="{% static 'bookings/images/training_session1.jpg' %}"
-                     class="d-block w-100 rounded"
-                     alt="Dalmation giving paw to trainer">
+                <img src="{% static 'bookings/images/me.jpg' %}"
+                     class="img-fluid rounded-circle shadow profile-img"
+                     alt="Declan - Dog Trainer">
 
             </div>
 
-            <div class="carousel-item">
+            <!-- About Text -->
+            <div class="col-md-7">
 
-                <img src="{% static 'bookings/images/training_session2.jpg' %}"
-                     class="d-block w-100 rounded"
-                     alt="Terrier performing leading training ">
+                <div class="info-card">
 
-            </div>
+                    <h2 class="section-title mb-3">
+                        <i class="bi bi-person-heart me-2 text-primary"></i>
+                        Who I Am
+                    </h2>
 
-            <div class="carousel-item">
+                    <p class="fs-5">
+                        Hi, I’m Declan — a dedicated dog trainer who believes every dog deserves
+                        patient, positive, and understanding guidance.
+                    </p>
 
-                <img src="{% static 'bookings/images/training_session3.jpg' %}"
-                     class="d-block w-100 rounded"
-                     alt="Woman practicing eye contact with german shepherd">
+                    <p>
+                        I have spent many years working with dogs in a variety of roles, from dog sitting
+                        and daycare centres to running training classes. Along the way, I’ve studied dog
+                        psychology and trained across multiple disciplines.
+                    </p>
 
-            </div>
-            
-            <div class="carousel-item">
+                    <p>
+                        Working with dogs isn’t just my career — it’s my passion. Every session is personalised,
+                        because no two dogs (or owners) are the same.
+                    </p>
 
-                <img src="{% static 'bookings/images/training_session4.jpg' %}"
-                     class="d-block w-100 rounded"
-                     alt="Dalmation laying down with trainer">
+                    <p>
+                        My goal is not just to train dogs, but to empower owners with the skills and confidence
+                        to continue that training at home.
+                    </p>
 
-            </div>
-            
-            <div class="carousel-item">
+                    <p class="fw-semibold fst-italic mt-3">
+                        “I don’t train dogs — I train humans to train their dogs.”
+                    </p>
 
-                <img src="{% static 'bookings/images/training_session5.jpg' %}"
-                     class="d-block w-100 rounded"
-                     alt="Malinois practicing heel with owner">
+                    <p>
+                        I truly believe that no dog is “untrainable.” With the right approach, patience,
+                        and understanding, every dog can learn and thrive.
+                    </p>
 
-            </div>
-            
-            <div class="carousel-item">
-
-                <img src="{% static 'bookings/images/puppy_training.jpg' %}"
-                     class="d-block w-100 rounded"
-                     alt="Puppy sitting nicely">
-
-            </div>
-            
-            <div class="carousel-item">
-
-                <img src="{% static 'bookings/images/obedience_training.jpg' %}"
-                     class="d-block w-100 rounded"
-                     alt="White dog sitting">
+                </div>
 
             </div>
 
         </div>
 
-        <!-- Controls -->
-        <button class="carousel-control-prev"
-                type="button"
-                data-bs-target="#trainingCarousel"
-                data-bs-slide="prev">
 
-            <span class="carousel-control-prev-icon"></span>
+        <!-- TRAINING GALLERY -->
+        <div class="text-center mb-5">
 
-        </button>
-
-        <button class="carousel-control-next"
-                type="button"
-                data-bs-target="#trainingCarousel"
-                data-bs-slide="next">
-
-            <span class="carousel-control-next-icon"></span>
-
-        </button>
-
-    </div>
-
-    </div>
-
-</div>
-
-<!-- STORY -->
-<div class="section">
-
-    <div class="row">
-
-        <div class="col-md-8 mx-auto text-center">
-
-            <h2 class="mb-4">
-                My Mission
+            <h2 class="section-title mb-4">
+                <i class="bi bi-camera-fill me-2 text-success"></i>
+                Training in Action
             </h2>
 
-            <p class="fs-5">
-                I started The Polite Pup because I saw how many wonderful dogs were being misunderstood, 
-                mislabelled, or given up on simply because they weren’t being taught in the right way.
-            </p>
+            <div class="carousel-wrapper">
 
-            <p>
-                My mission is to help every dog live the happiest, healthiest life possible — 
-                and to help owners feel confident, supported, and proud of their relationship with their dog.
-            </p>
+                <div id="trainingCarousel"
+                     class="carousel slide shadow rounded"
+                     data-bs-ride="carousel">
 
-            <p>
-                Through clear communication, positive reinforcement, and consistent guidance, 
-                I work with owners to create calm, well-mannered, and confident dogs.
-            </p>
+                    <div class="carousel-inner rounded">
 
-            <p>
-                Whether it's:
-                <ul>
-                    <li>Starting strong with puppy training</li>
-                    <li>Shaping good habits early</li>
-                    <li>Or helping adult dogs overcome challenges</li>
-                </ul>
-                I’m here to guide you every step of the way.
-            </p>
+                        <div class="carousel-item active">
+                            <img src="{% static 'bookings/images/training_session1.jpg' %}"
+                                 class="d-block w-100"
+                                 alt="Dog giving paw">
+                        </div>
 
-            <p>
-                My goal is simple:
-                to help you train kindly, communicate clearly, and build a lifelong friendship with your dog.
-            </p>
+                        <div class="carousel-item">
+                            <img src="{% static 'bookings/images/training_session2.jpg' %}"
+                                 class="d-block w-100"
+                                 alt="Terrier training">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="{% static 'bookings/images/training_session3.jpg' %}"
+                                 class="d-block w-100"
+                                 alt="Eye contact training">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="{% static 'bookings/images/training_session4.jpg' %}"
+                                 class="d-block w-100"
+                                 alt="Down stay training">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="{% static 'bookings/images/training_session5.jpg' %}"
+                                 class="d-block w-100"
+                                 alt="Heel training">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="{% static 'bookings/images/puppy_training.jpg' %}"
+                                 class="d-block w-100"
+                                 alt="Puppy training">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="{% static 'bookings/images/obedience_training.jpg' %}"
+                                 class="d-block w-100"
+                                 alt="Obedience training">
+                        </div>
+
+                    </div>
+
+                    <!-- Controls -->
+                    <button class="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#trainingCarousel"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+
+                    <button class="carousel-control-next"
+                            type="button"
+                            data-bs-target="#trainingCarousel"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MISSION -->
+        <div class="row justify-content-center">
+
+            <div class="col-md-9">
+
+                <div class="info-card text-center">
+
+                    <h2 class="section-title mb-4">
+                        <i class="bi bi-bullseye me-2 text-danger"></i>
+                        My Mission
+                    </h2>
+
+                    <p class="fs-5">
+                        I started <i>The Polite Pup</i> because I saw how many wonderful dogs were being
+                        misunderstood, mislabelled, or given up on simply because they weren’t being
+                        taught in the right way.
+                    </p>
+
+                    <p>
+                        My mission is to help every dog live the happiest, healthiest life possible —
+                        and to help owners feel confident, supported, and proud of their relationship
+                        with their dog.
+                    </p>
+
+                    <p>
+                        Through clear communication, positive reinforcement, and consistent guidance,
+                        I work with owners to create calm, well-mannered, and confident dogs.
+                    </p>
+
+                    <ul class="list-unstyled mission-list mt-4">
+
+                        <li>
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Starting strong with puppy training
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Shaping good habits early
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Supporting adult dogs with challenges
+                        </li>
+
+                    </ul>
+
+                    <p class="mt-4 fw-semibold">
+                        My goal is simple: help you train kindly, communicate clearly,
+                        and build a lifelong friendship with your dog.
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
 
     </div>
 
-</div>
+</section>
 
 <!-- SERVICES -->
 <div class="section">
