@@ -1,0 +1,1 @@
+web: gunicorn the_polite_pup.wsgi
