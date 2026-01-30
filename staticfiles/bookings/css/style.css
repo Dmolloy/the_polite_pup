@@ -1,0 +1,91 @@
+
+/* Main theme */
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero section */
+
+.hero {
+    background: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url("https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8");
+    
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    padding: 100px 20px;
+    border-radius: 15px;
+}
+
+/* About Me*/
+
+.info-section {
+    background: #f9fafb;
+    padding: 4rem 0;
+}
+
+
+.profile-img {
+    max-width: 220px;
+}
+
+.carousel-wrapper {
+    max-width: 320px;
+    margin: auto;
+}
+
+.mission-list li {
+    margin-bottom: 0.6rem;
+}
+
+/* Section spacing */
+
+.section {
+    margin-top: 80px;
+}
+
+.section-title {
+    font-weight: 600;
+}
+
+/* Cards */
+
+.service-card {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.info-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    padding: 2rem;
+    height: 100%;
+}
+
+/* Feature icons */
+
+.feature-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* CTA */
+
+.cta-box {
+    background: linear-gradient(to right, #198754, #0d6efd);
+    color: white;
+    padding: 50px;
+    border-radius: 15px;
+}
