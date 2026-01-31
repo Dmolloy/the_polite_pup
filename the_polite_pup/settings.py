@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-qn00ia0s*4md0zigypzj!bu01vi-6mz1)-m!-)vaa*uz5apf1h'
+SECRET_KEY = os.environ.get("SECRET_KEY", "unsafe-dev-secret-key")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -39,6 +39,8 @@ CSRF_TRUSTED_ORIGINS = [
     "https://the-polite-pup-ad968cdaf660.herokuapp.com",
     "https://the-polite-pup.herokuapp.com",
 ]
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 if not DEBUG:
     CSRF_COOKIE_SECURE = True
@@ -130,7 +132,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
