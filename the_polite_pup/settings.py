@@ -29,10 +29,20 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'the-polite-pup-ad968cdaf660.herokuapp.com',
+    "the-polite-pup.herokuapp.com",
     '.herokuapp.com',
     'localhost',
     '127.0.0.1'
 ]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://the-polite-pup-ad968cdaf660.herokuapp.com",
+    "https://the-polite-pup.herokuapp.com",
+]
+
+if not DEBUG:
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
 
 # Application definition
 
