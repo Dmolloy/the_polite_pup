@@ -28,6 +28,7 @@ SECRET_KEY = 'django-insecure-qn00ia0s*4md0zigypzj!bu01vi-6mz1)-m!-)vaa*uz5apf1h
 DEBUG = False
 
 ALLOWED_HOSTS = [
+    'the-polite-pup-ad968cdaf660.herokuapp.com',
     '.herokuapp.com',
     'localhost',
     '127.0.0.1'
