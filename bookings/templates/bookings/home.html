@@ -49,9 +49,10 @@
             <div class="col-md-5 text-center">
 
                 <img src="{% static 'bookings/images/me.webp' %}"
-                     class="img-fluid rounded-circle shadow profile-img"
-                     loading="lazy"
-                     alt="Declan - Dog Trainer">
+                    width="220" height="220"     
+                    class="img-fluid rounded-circle shadow profile-img"
+                    loading="lazy"
+                    alt="Declan - Dog Trainer">
 
             </div>
 
@@ -120,68 +121,77 @@
 
                         <div class="carousel-item active">
                             <img src="{% static 'bookings/images/training_session1.webp' %}"
-                                 class="d-block w-100"
-                                 loading="lazy"
-                                 alt="Dog giving paw">
+                                width="320" height="480"    
+                                class="d-block w-100"
+                                loading="lazy"
+                                alt="Dog giving paw">
                         </div>
 
                         <div class="carousel-item">
                             <img src="{% static 'bookings/images/training_session2.webp' %}"
-                                 class="d-block w-100"
-                                 loading="lazy"
-                                 alt="Terrier training">
+                                width="320" height="480"    
+                                class="d-block w-100"
+                                loading="lazy"
+                                alt="Terrier training">
                         </div>
 
                         <div class="carousel-item">
                             <img src="{% static 'bookings/images/training_session3.webp' %}"
-                                 class="d-block w-100"
-                                 loading="lazy"
-                                 alt="Eye contact training">
+                                width="320" height="480"
+                                class="d-block w-100"
+                                loading="lazy"
+                                alt="Eye contact training">
                         </div>
 
                         <div class="carousel-item">
                             <img src="{% static 'bookings/images/training_session4.webp' %}"
-                                 class="d-block w-100"
-                                 loading="lazy"
-                                 alt="Down stay training">
+                                width="320" height="480"    
+                                class="d-block w-100"
+                                loading="lazy"
+                                alt="Down stay training">
                         </div>
 
                         <div class="carousel-item">
                             <img src="{% static 'bookings/images/training_session5.webp' %}"
-                                 class="d-block w-100"
-                                 loading="lazy"
-                                 alt="Heel training">
+                                width="320" height="480"    
+                                class="d-block w-100"
+                                loading="lazy"
+                                alt="Heel training">
                         </div>
 
                         <div class="carousel-item">
                             <img src="{% static 'bookings/images/puppy_training.webp' %}"
-                                 class="d-block w-100"
-                                 loading="lazy"
-                                 alt="Puppy training">
+                                width="320" height="480"
+                                class="d-block w-100" 
+                                loading="lazy"
+                                alt="Puppy training">
                         </div>
 
                         <div class="carousel-item">
                             <img src="{% static 'bookings/images/obedience_training.webp' %}"
-                                 class="d-block w-100"
-                                 loading="lazy"
-                                 alt="Obedience training">
+                                width="320" height="480"
+                                class="d-block w-100"
+                                loading="lazy"
+                                alt="Obedience training">
                         </div>
 
                     </div>
 
                     <!-- Controls -->
-                    <button class="carousel-control-prev"
-                            type="button"
+                    <button class="carousel-control-prev" type="button"
                             data-bs-target="#trainingCarousel"
-                            data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
+                            data-bs-slide="prev"
+                            aria-label="Previous slide">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
                     </button>
 
-                    <button class="carousel-control-next"
-                            type="button"
+                    <button class="carousel-control-next" type="button"
                             data-bs-target="#trainingCarousel"
-                            data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
+                            data-bs-slide="next"
+                            aria-label="Next slide">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
                     </button>
 
                 </div>
@@ -269,7 +279,7 @@
 
                 <div class="card-body">
 
-                    <h4>🐶 Puppy Training</h4>
+                    <h3 class="h5">🐶 Puppy Training</h3>
 
                     <p>
                         Build strong habits early and set your
@@ -288,7 +298,7 @@
 
                 <div class="card-body">
 
-                    <h4>🎯 Obedience</h4>
+                    <h3 class="h5">🎯 Obedience</h3>
 
                     <p>
                         Master commands, loose-lead walking,
@@ -307,7 +317,7 @@
 
                 <div class="card-body">
 
-                    <h4>❤️ Behaviour Support</h4>
+                    <h3 class="h5">❤️ Behaviour Support</h3>
 
                     <p>
                         Help with anxiety, barking,
