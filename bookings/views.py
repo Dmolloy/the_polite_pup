@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-
+from django.views.decorators.csrf import csrf_protect, ensure_csrf_cookie
+from django.http import HttpResponseForbidden
+from django.views.decorators.csrf import requires_csrf_token
 from .models import Booking
 from .forms import BookingForm
 
@@ -9,7 +11,8 @@ from .forms import BookingForm
 def home(request):
     return render(request, 'bookings/home.html')
 
-
+@csrf_protect
+@ensure_csrf_cookie
 def signup(request):
 
     if request.method == 'POST':
@@ -82,6 +85,7 @@ def my_bookings(request):
         {'bookings': bookings}
     )
 
+
 @login_required
 def delete_booking(request, booking_id):
 
@@ -101,8 +105,6 @@ def delete_booking(request, booking_id):
         {'booking': booking}
     )
 
-from django.http import HttpResponseForbidden
-from django.views.decorators.csrf import requires_csrf_token
 
 @requires_csrf_token
 def csrf_failure(request, reason=""):
