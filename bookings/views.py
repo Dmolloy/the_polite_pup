@@ -100,3 +100,10 @@ def delete_booking(request, booking_id):
         'bookings/delete_booking.html',
         {'booking': booking}
     )
+
+from django.http import HttpResponseForbidden
+from django.views.decorators.csrf import requires_csrf_token
+
+@requires_csrf_token
+def csrf_failure(request, reason=""):
+    return HttpResponseForbidden(f"CSRF Failed: {reason}")

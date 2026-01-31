@@ -48,6 +48,8 @@ if not DEBUG:
     CSRF_COOKIE_SECURE = True
     SESSION_COOKIE_SECURE = True
 
+CSRF_FAILURE_VIEW = "bookings.views.csrf_failure"
+
 # Application definition
 
 INSTALLED_APPS = [
