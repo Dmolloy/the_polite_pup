@@ -11,6 +11,7 @@ from .forms import BookingForm
 def home(request):
     return render(request, 'bookings/home.html')
 
+
 @csrf_protect
 @ensure_csrf_cookie
 def signup(request):
