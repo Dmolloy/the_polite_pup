@@ -23,7 +23,7 @@ class Booking(models.Model):
     )
     date = models.DateField()
     time = models.TimeField()
-    notes = models.TextField(blank=True)
+    notes = models.TextField()
 
     def __str__(self):
         return f"{self.user} - {self.session}"
