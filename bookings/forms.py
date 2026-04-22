@@ -1,25 +1,21 @@
 from django import forms
 from django.utils import timezone
-from datetime import datetime
 from .models import Booking
+
 
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = ["session", "date", "time", "notes"]
+        widgets = {
+            "session": forms.Select(attrs={"class": "form-select"}),
+            "date": forms.DateInput(attrs={"type": "date", "class": "form-control"}),
+            "time": forms.TimeInput(attrs={"type": "time", "class": "form-control"}),
+            "notes": forms.Textarea(attrs={"class": "form-control", "rows": 3}),
+        }
 
-    def clean(self):
-        cleaned_data = super().clean()
-        date = cleaned_data.get("date")
-        time = cleaned_data.get("time")
-
-        if date and time:
-            selected_datetime = datetime.combine(date, time)
-            current_datetime = timezone.localtime().replace(tzinfo=None)
-
-            if selected_datetime < current_datetime:
-                raise forms.ValidationError(
-                    "Please select a future date and time."
-                )
-
-        return cleaned_data
+    def clean_date(self):
+        date = self.cleaned_data["date"]
+        if date < timezone.localdate():
+            raise forms.ValidationError("Please select a future date.")
+        return date

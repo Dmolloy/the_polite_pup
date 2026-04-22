@@ -19,10 +19,14 @@
                 {{ form.as_p }}
 
                 {% if form.errors %}
-                
+                    <div class="alert alert-danger">
+                        {{ form.errors }}
+                    </div>
+                {% endif %}
+
                 <div class="d-grid mt-3">
                     <button type="submit" class="btn btn-primary btn-lg">
-                    Book Session
+                        Book Session
                     </button>
                 </div>
 
