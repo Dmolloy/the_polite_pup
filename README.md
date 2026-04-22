@@ -137,7 +137,7 @@ Each booking includes:
 
 ### Databases
 - SQLite (development)
-- [PostgreSQL](https://www.postgresql.org) used as the relational database management.
+- [PostgreSQL](https://www.postgresql.org) used as the production relational database.
 
 ---
 
@@ -145,14 +145,15 @@ Each booking includes:
 - [HTML](https://en.wikipedia.org/wiki/HTML) - Used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) -Used for styling and colours
 - [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Used to support interactive functionality.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Used minimally for Bootstrap components and client-side interactions.
 - [Google Dev Tools](https://developer.chrome.com/docs/devtools) - Used for troubleshooting, testing responsiveness, and styling.
 - [GitHub](https://github.com/) - Used to save and store the project files.
-- [Gitpod](https://ona.com/) - Used as a cloud-based IDE for development.
+- [Gitpod](https://www.gitpod.io/) - Cloud-based IDE for development
 - [Git](https://git-scm.com/) - Used for version control. (git add, git commit, git push)
 - [Google Fonts](https://fonts.google.com/) - Imported fonts used throughout the website.
 - [Heroku](https://dashboard.heroku.com/) - Live deployment of the site was hosted here
-- [Django](https://www.djangoproject.com/) - Framework that helped build the site
+- [Django](https://www.djangoproject.com/) - Framework that helped build the site. 
+- Django Admin enabled for secure backend management of users and bookings
 - [Gunicorn](https://gunicorn.org/) used for WSGI server
 
 
