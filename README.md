@@ -131,6 +131,33 @@ Each booking includes:
 
 ---
 
+## Data Model
+
+The application uses a relational database to store users and bookings.
+
+### Models
+
+#### Booking
+- `user` - ForeignKey to Django User model
+- `session` - selected training session
+- `date` - booking date
+- `time` - booking time
+- `notes` - optional booking notes
+
+### Relationships
+- One user can have many bookings
+- Each booking belongs to exactly one user
+
+This structure ensures users can manage their own records securely while keeping data organised and scalable.
+
+## Security Features
+
+- Django authentication is used for secure login and logout
+- Users can only view and manage their own bookings
+- CSRF protection is enabled for form submissions
+- Sensitive values such as `SECRET_KEY` and `DATABASE_URL` are stored using environment variables
+- `DEBUG` is set to `False` in production
+
 ## Tools & Technologies Used
 
 ---
