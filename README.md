@@ -206,7 +206,7 @@ The project was deployed to Heroku using the following steps:
 7. Scale web dyno
 
 The live application can be found here:  
-https://the-polite-pup-ad968cdaf660.herokuapp.com/
+https://the-polite-pup-ad72f09397c7.herokuapp.com/
 
 Heroku needs two additional files in order to deploy properly.
 - requirements.txt
